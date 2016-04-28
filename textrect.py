@@ -1,7 +1,4 @@
-# Render Text Rectangle
-# Public Domain (c) 2001 by David Clark 
-
-# line wrapped text rendering (Public Domain, by David Clark)
+# line wrapped text rendering (David Clark, http://www.pygame.org/pcr/text_rect/index.php)
 # modified by Chris Burri @ NISTON Engineering Works (http://niston.wordpress.com)
 
 class TextRectException:
@@ -63,10 +60,11 @@ def render_textrect(string, font, rect, text_color, background_color, justificat
         else:
             final_lines.append(requested_line)
 
+    # determine full height
     accumulated_height = 0
     for line in final_lines:
         accumulated_height += font.size(line)[1]
-
+    # center vertically
     offsetY = ((rect.height - accumulated_height) / 2)
 
 

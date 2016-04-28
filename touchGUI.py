@@ -397,7 +397,7 @@ class GUI:
 	def guiLoop(self, dummy):
 		while self.IsRunning:
                    try:
-			# put main loop to sleep (yield processing)
+			# put main loop to sleep (yield processing time)
 			time.sleep(0.05)
 			# invoke pygame event pump
 			pygame.event.pump()
@@ -596,7 +596,7 @@ class NumPadPage(GUIPage):
 		self.lblLimit.BorderVisible = False
 		self.lblLimit.Visible = True
 		# Text Label
-		self.lblText = self.AddElement(GUITextBox('lblText', 25, 15, 382, 47, 'Set Signal Frequency', None))
+		self.lblText = self.AddElement(GUITextBox('lblText', 25, 15, 382, 47, 'Numerical Input', None))
 		self.lblText.TextAlignHorizontal = GUITextBox.TEXTALIGN_HORIZONTAL_LEFT
 		self.lblText.BorderVisible = False
 		self.lblText.FontSize = 24
