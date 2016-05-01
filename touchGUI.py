@@ -378,6 +378,9 @@ class GUI:
 			# set new current page active
 			self.Pages[self.CurrentPageIndex].IsActive = True
 
+			# call OnShow on the new page
+			self.Pages[self.CurrentPageIndex].OnShow()
+
 			# render the page
 	                self.Render()
 
@@ -454,6 +457,11 @@ class GUIPage:
 
 	# initialization is used to set up elements on the page
 	def Initialize(self):
+		# do nothing in base class
+		pass
+
+	# called when page is being shown
+	def OnShow(self):
 		# do nothing in base class
 		pass
 
